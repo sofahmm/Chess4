@@ -13,36 +13,38 @@ namespace chess_figure
         {
 
             string pieceCode = Console.ReadLine();
-            Figure fig = new Figure(1, 1);
+            int x1 = Convert.ToInt32(Console.ReadLine());
+            int y1 = Convert.ToInt32(Console.ReadLine());
+            int x2 = Convert.ToInt32(Console.ReadLine());
+            int y2 = Convert.ToInt32(Console.ReadLine());
+            Figure fig; //= new Figure(1, 1);
             bool isRightMove = false;
 
             switch (pieceCode)
             {
                 case "K":
-                    King omg = new King(4, 4);
-                    isRightMove = omg.Move(5, 5);
+                    fig = new King(x1, y1);
                     break;
                 case "Q":
-                    Queen omg1 = new Queen(1, 1);
-                    isRightMove = omg1.Move(2, 2);
+                    fig = new Queen(x1, y1);
                     break;
                 case "B":
-                    Bishop omg2 = new Bishop(4, 4);
-                    isRightMove = omg2.Move(5, 5);
+                    fig = new Bishop(x1, y1);
                     break;
                 case "N":
-                    Knight omg3 = new Knight(1, 1);
-                    isRightMove = omg3.Move(8, 8);
+                    fig = new Knight(x1, y1);
                     break;
                 case "R":
-                    Rook omg4 = new Rook(4, 4);
-                    isRightMove = omg4.Move(5, 5);
+                    fig = new Rook(x1, y1);
                     break;
 
                 default:
                     Console.WriteLine("Unknown piece code. Try again.");
+                    fig = null;
                     break;
             }
+
+            isRightMove = fig.Move(x2, y2);
             Console.WriteLine(isRightMove ? "YES" : "NO");
         }
     }
