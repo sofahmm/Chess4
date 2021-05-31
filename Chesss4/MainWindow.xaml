@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Chesss4"
         mc:Ignorable="d"
-        Title="MainWindow" Height="864.601" Width="975.896">
+        Title="MainWindow" Height="914.438" Width="1069.707">
     <Grid>
         <Button Content="" HorizontalAlignment="Left" Margin="101,122,0,0" VerticalAlignment="Top" Width="100" Height="100"/>
         <Button Content="" HorizontalAlignment="Left" Margin="201,122,0,0" VerticalAlignment="Top" Width="100" Height="100" Background="Black"/>
